@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 ARG DOMAIN_NAME=fbartole.42.fr
 

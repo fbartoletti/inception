@@ -390,7 +390,7 @@ docker pull mysql:latest
 **Inception Approach:**
 ```dockerfile
 # Building custom WordPress image
-FROM alpine:3.20
+FROM alpine:3.24.0
 RUN apk add --no-cache php php-fpm wordpress
 # Custom configurations...
 ```
@@ -681,7 +681,7 @@ In Inception, we had the choice between Debian and Alpine Linux as base images f
 ### Base Image Declaration
 ```dockerfile
 # All our Dockerfiles start with
-FROM alpine:3.20
+FROM alpine:3.24.0
 ```
 
 ### Package Installation Pattern
@@ -887,7 +887,7 @@ nginx:
 ### 2. Dockerfile Analysis
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 RUN apk add --no-cache \
     nginx \
@@ -1087,7 +1087,7 @@ wordpress:
 ### 2. Dockerfile Analysis
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 RUN apk update && apk add --no-cache \
     php82 \
@@ -1415,7 +1415,7 @@ mariadb:
 ### 2. Dockerfile Analysis
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 ENV MARIADB_DATA_DIR=/var/lib/mysql
 
@@ -1665,7 +1665,7 @@ adminer:
 
 ### Dockerfile Analysis
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 RUN apk update && apk add --no-cache \
     apache2 \
@@ -1832,7 +1832,7 @@ redis:
 ### 2. Dockerfile Analysis
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 RUN apk update && apk add --no-cache redis
 
@@ -2002,7 +2002,7 @@ ftp:
 ### 2. Dockerfile Analysis
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 RUN apk update && \
     apk add --no-cache \
@@ -2182,7 +2182,7 @@ gatsby-app:
 ### Node.js Environment Setup
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 WORKDIR /app
 
@@ -2285,7 +2285,7 @@ alien-eggs:
 ### Container Setup
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 RUN apk update && apk add --no-cache \
     python3 \
@@ -2442,7 +2442,7 @@ cadvisor:
 ### Container Setup
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 ENV VERSION="v0.49.2"
 
@@ -2626,7 +2626,7 @@ prometheus:
 ### Dockerfile Analysis
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 # Install necessary packages
 RUN apk add --no-cache \
@@ -2880,7 +2880,7 @@ grafana:
 ### Dockerfile Analysis
 
 ```dockerfile
-FROM alpine:3.20
+FROM alpine:3.24.0
 
 RUN apk update && apk add --no-cache \
     grafana \

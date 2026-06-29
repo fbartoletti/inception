@@ -51,7 +51,7 @@ Other Makefile targets: `make down`, `make logs`, `make ps`, `make clean`,
 ### Use of Docker
 
 Each service is described by its own `Dockerfile` under
-`srcs/requirements/<service>/`, built from `alpine:3.20` (penultimate stable
+`srcs/requirements/<service>/`, built from `alpine:3.24.0` (penultimate stable
 Alpine at the time of writing). No image is pulled ready-made from Docker Hub.
 The build, network, volumes, secrets and restart policy are declared in
 `srcs/docker-compose.yml`. The Makefile at the project root drives the whole
