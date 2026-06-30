@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+# wp-cli is a phar run directly, so WP_CLI_PHP_ARGS is ignored. Wrap it to raise
+# PHP's memory limit, otherwise extracting WordPress hits the 128M default cap.
+wp() { php -d memory_limit=512M /usr/local/bin/wp "$@"; }
+
 DB_PASSWORD="$(cat "${MYSQL_PASSWORD_FILE}")"
 WP_ADMIN_PASSWORD="$(cat "${WP_ADMIN_PASSWORD_FILE}")"
 WP_USER_PASSWORD="$(cat "${WP_USER_PASSWORD_FILE}")"
